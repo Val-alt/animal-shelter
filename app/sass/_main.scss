@@ -1,0 +1,92 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  font-size: 18px;
+  color: $gray;
+  line-height: 2;
+}
+
+.h1 {
+  font-size: 60px;
+  color: $green;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.h2 {
+  position: relative;
+  display: block;
+  width: 100px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 70px;
+  font-size: 30px;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: $green;
+
+  &:after {
+    content: " ";
+    display: block;
+    width: 40px;
+    height: 3px;
+    background-color: $beige;
+    position: absolute;
+    top: 50%;
+    right: -60px;
+  }
+
+  &:before {
+    content: " ";
+    display: block;
+    width: 40px;
+    height: 3px;
+    background-color: $beige;
+    position: absolute;
+    top: 50%;
+    left: -60px;
+  }
+}
+
+.h3 {
+  font-size: 24px;
+  font-weight: normal;
+
+  &--main-page {
+    line-height: 1.8;
+    max-width: 600px;
+  }
+}
+
+.btn {
+  display: inline-block;
+  padding: 25px 50px;
+  background-color: $green;
+  color: $white;
+  font-size: 24px;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: 0.25s;
+  
+
+  // &:hover {
+  //   cursor: pointer;
+  //   // box-shadow: 0 10px 20px $gray;
+  //   // transition: 1s;
+  // }
+}
+
+.btn:hover {
+  animation: pulse 1s;
+  box-shadow: 0 0 0 1em rgba(#fff,0);
+}
+
+@keyframes pulse {
+  0% { box-shadow: 0 0 0 0 $light-green; }
+}

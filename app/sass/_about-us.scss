@@ -1,0 +1,34 @@
+.about-us {
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+.about-us__img {
+  & img {
+    max-width: 100%;
+  }
+}
+
+.about-us__text {
+  position: relative;
+
+  & p {
+    margin-bottom: 60px;
+  }
+
+  &:after {
+    content: " ";
+    display: block;
+    z-index: -1;
+    opacity: 0.2;
+    transform: rotate(-30deg);
+    position: absolute;
+    top: -30px;
+    left: 30px;
+    width: 407px;
+    height: 453px;
+    background-image: url("../images/paw.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+}
