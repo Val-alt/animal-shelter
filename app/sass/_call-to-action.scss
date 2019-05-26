@@ -1,4 +1,53 @@
 .call-to-action {
-    background-color: $light-beige;
-    padding: 45px 0;
+  background-color: $light-beige;
+  padding-top: calc(2vw + 10px);
+  padding-bottom: calc(2vw + 10px);
+  position: relative;
+  z-index: 1;
+
+  &__title {
+    color: $green;
+    font-size: 1.65rem;
+    // font-size: 30px;
+    font-weight: bold;
+    padding-bottom: calc(0.8vw + 20px);
+  }
+
+  &__btn {
+    @media only screen and (max-width: $m) {
+      text-align: center;
+      padding-top: calc(3vw + 10px);
+      padding-bottom: calc(3vw + 10px);
+    }
+  }
+
+  // &:after {
+  //     content: " ";
+  //     display: block;
+  //     width: 80px;
+  //     height: 100%;
+  //     background-image: url("../images/paw.png");
+  //     background-size: contain;
+  //     background-repeat: repeat;
+  //     opacity: 0.2;
+  //     position: absolute;
+  //     top: 0px;
+  //     left: 0px;
+  //     z-index: 2;
+  //   }
+
+  //   &::before {
+  //     content: " ";
+  //     display: block;
+  //     width: 80px;
+  //     height: 100%;
+  //     background-image: url("../images/paw.png");
+  //     background-size: contain;
+  //     background-repeat: repeat;
+  //     opacity: 0.2;
+  //     position: absolute;
+  //     top: 0px;
+  //     right: 0px;
+  //     z-index: 2;
+  //   }
 }

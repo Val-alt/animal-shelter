@@ -1,6 +1,11 @@
 .container {
     margin: 0 auto;
-    width: 1180px;
+    max-width: 1180px;
+    padding: 0px 40px;
+
+    @media only screen and (max-width: $xs) {
+        padding: 0px 20px;
+      }
 }
 
 .row {
@@ -8,21 +13,79 @@
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: stretch; 
+    align-content: stretch; 
 
     &--center {
         align-items: center; 
     }
+
+    &--around {
+        justify-content: space-around;
+    }
 }
+
+.col-1 {
+    flex: 0 0 5%;
+}
+
+.col-2 {
+    flex: 0 0 15%;
+}
+
+.col-3 {
+    flex: 0 0 24%;
+}
+
+.col-4 {
+    flex: 0 0 32%;
+}
+
+.col-5 {
+    flex: 0 0 39%;
+}
+
 
 .col-6 {
     flex: 0 0 47%;
+}
+
+.col-7 {
+    flex: 0 0 56%;
 }
 
 .col-8 {
     flex: 0 0 66%;
 }
 
-.col-3 {
-    flex: 0 0 24%;
+.col-9 {
+    flex: 0 0 70%;
+}
+
+.col-12 {
+    flex: 0 0 100%;
+}
+
+.col-m-6 {
+    @media only screen and (max-width: $m) {
+        flex: 0 0 48%;
+    }
+}
+
+.col-xs-10 {
+    @media only screen and (max-width: $xs) {
+        flex: 0 0 70%;
+    }
+}
+
+.col-m-12 {
+    @media only screen and (max-width: $m) {
+        flex: 0 0 100%;
+    }
+}
+
+.col-xs-12 {
+    @media only screen and (max-width: $xs) {
+        flex: 0 0 100%;
+    }
 }
 

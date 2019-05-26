@@ -5,7 +5,10 @@ var gulp = require("gulp"),
   newer = require("gulp-newer"),
   cssmin = require("gulp-cssnano"),
   imagemin = require("gulp-imagemin"),
-  uglify = require("gulp-uglify"),
+  // uglify = require("gulp-uglify"),
+  uglifyes = require("uglify-es"),
+  composer = require("gulp-uglify/composer"),
+  uglify = composer(uglifyes, console),
   browserSync = require("browser-sync"),
   del = require("del");
 

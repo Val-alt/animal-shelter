@@ -3,28 +3,119 @@
   padding: 0;
 }
 
-body {
+input,
+a:link,
+button {
+  -webkit-tap-highlight-color: transparent;
+}
+
+*,
+:active,
+:focus,
+:hover {
+  outline-style: none;
+  outline-width: 0px;
+  outline-color: none;
+}
+
+html {
   font-family: "Open Sans", sans-serif;
   font-size: 18px;
   color: $gray;
   line-height: 2;
+
+  @media only screen and (max-width: $l) {
+    font-size: 16px;
+  }
+
+  @media only screen and (max-width: $s) {
+    font-size: 14px;
+    line-height: 1.7;
+  }
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
 }
 
 .h1 {
-  font-size: 60px;
+  font-size: 3.3rem;
+  // font-size: 60px;
   color: $green;
   text-transform: uppercase;
   font-weight: bold;
+  padding-top: 0.8vw;
+  max-width: 60%;
+  line-height: 1.5;
+
+  // @media only screen and (max-width: $m) {
+  //   width: 30px;
+  //   left: -40px;
+  // }
+
+  @media only screen and (max-width: $s) {
+    max-width: 100%;
+    font-size: 2.5rem;
+  }
+}
+
+#about-us .h2 {
+  width: 100px;
+
+  @media only screen and (max-width: $l) {
+    width: 85px;
+  }
+
+  @media only screen and (max-width: $s) {
+    width: 74px;
+  }
+}
+
+#animals .h2 {
+  width: 323px;
+
+  @media only screen and (max-width: $l) {
+    width: 285px;
+  }
+
+  @media only screen and (max-width: $s) {
+    width: 250px;
+  }
+}
+
+#help-shelter .h2 {
+  width: 275px;
+
+  @media only screen and (max-width: $l) {
+    width: 243px;
+  }
+
+  @media only screen and (max-width: $s) {
+    width: 212px;
+  }
+}
+
+#contacts .h2 {
+  width: 170px;
+    
+  @media only screen and (max-width: $l) {
+    width: 148px;
+  }
+
+  @media only screen and (max-width: $s) {
+    width: 132px;
+  }
 }
 
 .h2 {
   position: relative;
   display: block;
-  width: 100px;
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 70px;
-  font-size: 30px;
+  margin-bottom: calc(2.8vw + 10px);
+  font-size: 1.65rem;
+  // font-size: 30px;
   font-weight: bold;
   text-transform: uppercase;
   font-weight: bold;
@@ -39,6 +130,16 @@ body {
     position: absolute;
     top: 50%;
     right: -60px;
+
+    @media only screen and (max-width: $s) {
+      width: 30px;
+      right: -40px;
+    }
+
+    @media only screen and (max-width: $xs) {
+      width: 20px;
+      right: -25px;
+    }
   }
 
   &:before {
@@ -50,30 +151,66 @@ body {
     position: absolute;
     top: 50%;
     left: -60px;
+
+    @media only screen and (max-width: $s) {
+      width: 30px;
+      left: -40px;
+    }
+
+    @media only screen and (max-width: $xs) {
+      width: 20px;
+      left: -25px;
+    }
   }
 }
 
-.h3 {
-  font-size: 24px;
-  font-weight: normal;
+#main-page .h3 {
+  line-height: 1.8;
+  max-width: 60%;
 
-  &--main-page {
-    line-height: 1.8;
-    max-width: 600px;
+  padding-top: calc(3vw + 10px);
+  padding-bottom: calc(4vw + 10px);
+
+  @media only screen and (max-width: $s) {
+    max-width: 80%;
+    font-weight: bold;
   }
+}
+
+#animals .h3 {
+  max-width: 600px;
+  text-align: center;
+  margin: 0 auto;
+}
+
+#help-shelter .h3 {
+  max-width: 700px;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.h3 {
+  font-size: 1.3rem;
+  // font-size: 24px;
+  font-weight: normal;
+}
+
+.h4 {
+  font-size: 1.3rem;
+  // font-size: 24px;
+  font-weight: bold;
 }
 
 .btn {
   display: inline-block;
-  padding: 25px 50px;
+  padding: 1.5vw 2vw;
   background-color: $green;
   color: $white;
-  font-size: 24px;
+  font-size: 1.3rem;
+  // font-size: 24px;
   font-weight: bold;
   text-transform: uppercase;
-  text-decoration: none;
   transition: 0.25s;
-  
 
   // &:hover {
   //   cursor: pointer;
@@ -84,9 +221,11 @@ body {
 
 .btn:hover {
   animation: pulse 1s;
-  box-shadow: 0 0 0 1em rgba(#fff,0);
+  box-shadow: 0 0 0 1em rgba(#fff, 0);
 }
 
 @keyframes pulse {
-  0% { box-shadow: 0 0 0 0 $light-green; }
+  0% {
+    box-shadow: 0 0 0 0 $light-green;
+  }
 }

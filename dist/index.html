@@ -9,26 +9,81 @@
     <title>Фонд-передержка животных</title>
   </head>
   <body>
-    <section class="main-page">
-      <nav class="navigation"></nav>
+    <section class="main-page" id="main-page">
+      <nav class="navigation">
+        <div class="row">
+          <p class="logo col-2">
+            <a href="#main-page"
+              >ФОНД-ПЕРЕДЕРЖКА <br />
+              ЖИВОТНЫХ</a
+            >
+          </p>
+          <ul class="col-7">
+            <div class="row row--around">
+              <li class="navigation__item"><a href="#about-us">о нас</a></li>
+              <li class="navigation__item">
+                <a href="#animals">ищут добрые руки</a>
+              </li>
+              <li class="navigation__item">
+                <a href="#help-shelter">помощь фонду</a>
+              </li>
+              <li class="navigation__item">
+                <a href="#contacts">обратная связь</a>
+              </li>
+              <li class="navigation__item"><a href="#contacts">контакты</a></li>
+            </div>
+          </ul>
+        </div>
+      </nav>
+
+      <nav class="navigation-mob">
+        <div class="row row--center">
+          <div class="col-9">
+            <a class="navigation-mob__logo" href="#main-page"
+              >ФОНД-ПЕРЕДЕРЖКА ЖИВОТНЫХ</a
+            >
+          </div>
+          <div class="col-2">
+            <button class="navigation-mob__btn"></button>
+          </div>
+        </div>
+        <div class="navigation-mob__block">
+          <ul class="">
+            <li class="navigation-mob__item"><a href="#about-us">о нас</a></li>
+            <li class="navigation-mob__item">
+              <a href="#animals">ищут добрые руки</a>
+            </li>
+            <li class="navigation-mob__item">
+              <a href="#help-shelter">помощь фонду</a>
+            </li>
+            <li class="navigation-mob__item">
+              <a href="#contacts">обратная связь</a>
+            </li>
+            <li class="navigation-mob__item">
+              <a href="#contacts">контакты</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+
       <div class="container">
         <h1 class="h1">Всё в ваших руках</h1>
-        <h3 class="h3 h3--main-page">
+        <h3 class="h3">
           Для счастья не важна порода! Только вы можете подарить счастье
           пушистику и обрести верного любящего друга.
         </h3>
-        <a href="#" class="btn">Найти друга</a>
+        <a href="#animals" class="btn">Найти друга</a>
       </div>
     </section>
-    <section class="about-us">
+    <section class="about-us" id="about-us">
       <div class="container">
         <h2 class="h2">О нас</h2>
         <div class="row">
-          <div class="col-6 about-us__text">
+          <div class="col-6 col-m-12  about-us__text">
             <p>
-              История приюта История приюта История приюта миссия миссия миссия
-              миссия миссия всяко разный текст всяко разный текст всяко разный
-              текст всяко разный текст всяко разный текст
+              История История приюта История приюта миссия миссия миссия миссия
+              миссия всяко разный текст всяко разный текст всяко разный текст
+              всяко разный текст всяко разный текст
             </p>
             <p>
               История приюта История приюта История приюта миссия миссия миссия
@@ -36,7 +91,7 @@
               текст всяко разный текст всяко разный текст
             </p>
           </div>
-          <div class="col-6 about-us__img">
+          <div class="col-6 col-m-12 about-us__img">
             <img src="images/cat-house.jpg" alt="" />
           </div>
         </div>
@@ -45,36 +100,287 @@
     <section class="call-to-action">
       <div class="container">
         <div class="row row--center">
-          <div class="col-8">
+          <div class="col-8 col-m-12">
+            <p class="call-to-action__title">
+              Нам нужна ваша помощь!
+            </p>
             <p>
               Приют ежедневно заботится о (почти) 777 животных. Самый лучший
               способ помочь нуждающимся хвостикам - пожертвовать любую сумму на
               корм, лечение и обеспечение деятельности приюта.
             </p>
           </div>
-          <div class="col-3">
-            <a href="#" class="btn">Помочь нам</a>
+          <div class="col-3 col-m-12 call-to-action__btn">
+            <a href="#help-shelter" class="btn">Помочь нам</a>
           </div>
         </div>
       </div>
     </section>
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
+    <section class="animals" id="animals">
+      <div class="container">
+        <h2 class="h2">Ищут добрые руки</h2>
+        <h3 class="h3">
+          Одни бросают, другие - спасают!
+          <br />
+          Эти пушистики нуждаются в ваших добрых руках!
+        </h3>
+        <div class="row">
+          <div class="col-4 col-m-6 col-xs-12 animals__item">
+            <img class="animals__img" src="images/cat1.jpg" alt="кошка" />
+            <div class="animals__info">
+              <img class="animals__ico" src="images/female.png" alt="female" />
+              <p class="animals__title">Маруся</p>
+              <p class="animals__par">Пол: девочка</p>
+              <p class="animals__par">Возраст: 3 года</p>
+              <p class="animals__par">Кастрирована</p>
+            </div>
+          </div>
+          <div class="col-4 col-m-6 col-xs-12 animals__item">
+            <img class="animals__img" src="images/cat2.jpg" alt="кошка" />
+            <div class="animals__info">
+              <img class="animals__ico" src="images/male.png" alt="female" />
+              <p class="animals__title">Васька</p>
+              <p class="animals__par">Пол: мальчик</p>
+              <p class="animals__par">Возраст: 1 год</p>
+            </div>
+          </div>
+          <div class="col-4 col-m-6 col-xs-12 animals__item">
+            <img class="animals__img" src="images/cat3.jpeg" alt="кошка" />
+            <div class="animals__info">
+              <img class="animals__ico" src="images/female.png" alt="female" />
+              <p class="animals__title">Маруся</p>
+              <p class="animals__par">Пол: девочка</p>
+              <p class="animals__par">Возраст: 3 года</p>
+              <p class="animals__par">Кастрирована</p>
+            </div>
+          </div>
+          <div class="col-4 col-m-6 col-xs-12 animals__item">
+            <img class="animals__img" src="images/cat4.jpg" alt="кошка" />
+            <div class="animals__info">
+              <img class="animals__ico" src="images/male.png" alt="female" />
+              <p class="animals__title">Васька</p>
+              <p class="animals__par">Пол: мальчик</p>
+              <p class="animals__par">Возраст: 1 год</p>
+            </div>
+          </div>
+
+          <div class="col-4 col-m-6 col-xs-12 animals__item">
+            <img class="animals__img" src="images/cat5.jpg" alt="кошка" />
+            <div class="animals__info">
+              <img class="animals__ico" src="images/female.png" alt="female" />
+              <p class="animals__title">Маруся</p>
+              <p class="animals__par">Пол: девочка</p>
+              <p class="animals__par">Возраст: 3 года</p>
+              <p class="animals__par">Кастрирована</p>
+            </div>
+          </div>
+
+          <div class="col-4 col-m-6 col-xs-12 animals__item">
+            <img class="animals__img" src="images/cat6.jpg" alt="кошка" />
+            <div class="animals__info">
+              <img class="animals__ico" src="images/male.png" alt="female" />
+              <p class="animals__title">Васька</p>
+              <p class="animals__par">Пол: мальчик</p>
+              <p class="animals__par">Возраст: 1 год</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="help-shelter" id="help-shelter">
+      <div class="container">
+        <h2 class="h2">Помощь фонду</h2>
+        <h3 class="h3">
+          Помогать можно не только деньгами, но и добрыми делами!
+        </h3>
+
+        <div class="row row--around">
+          <div class="col-5 col-xs-10 help-shelter__item">
+            <h5 class="h4">Медикаменты</h5>
+            <ul class="help-shelter__ul">
+              <li>
+                <p>таблеткитаблетки</p>
+              </li>
+              <li>
+                <p>шприцы</p>
+              </li>
+              <li>
+                <p>пеленки</p>
+              </li>
+              <li>
+                <p>таблеткитаблетки</p>
+              </li>
+              <li>
+                <p>шприцы</p>
+              </li>
+              <li>
+                <p>пеленки</p>
+              </li>
+            </ul>
+          </div>
+
+          <div class="col-5 col-xs-10 help-shelter__item">
+            <h5 class="h4">Еда</h5>
+            <ul class="help-shelter__ul">
+              <li>
+                <p>корм</p>
+              </li>
+              <li>
+                <p>каша</p>
+              </li>
+              <li>
+                <p>корм</p>
+              </li>
+              <li>
+                <p>каша</p>
+              </li>
+            </ul>
+          </div>
+
+          <div class="col-5 col-xs-10 help-shelter__item">
+            <h5 class="h4">Хоз. предметы</h5>
+            <ul class="help-shelter__ul">
+              <li>
+                <p>резиновые перчатки</p>
+              </li>
+              <li>
+                <p>тряпки</p>
+              </li>
+              <li>
+                <p>порошок</p>
+              </li>
+              <li>
+                <p>наполнитель</p>
+              </li>
+              <li>
+                <p>порошок</p>
+              </li>
+              <li>
+                <p>наполнитель</p>
+              </li>
+              <li>
+                <p>порошок</p>
+              </li>
+            </ul>
+          </div>
+
+          <div class="col-5 col-xs-10 help-shelter__item">
+            <h5 class="h4">Материальная помощь</h5>
+            <img src="images/sber.png" alt="" />
+            <span>
+              карта сбербанка привязана к номеру
+              <br />
+              8 921 123 12 12, получатель Иванов И.И.
+            </span>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="contacts" id="contacts">
+      <div class="container">
+        <h2 class="h2">Контакты</h2>
+        <div class="row">
+          <div class="col-5 col-m-12">
+            <p>
+              Остались вопросы? Хотите помочь? Свяжитесь с нами по телефону,
+              почте или отправьте письмо прям с сайта!
+            </p>
+            <div class="row">
+              <div class="col-12 col-m-6 col-xs-10 contacts__item">
+                <img src="images/phone.png" alt="телефон" /><a
+                  href="tel:+79211231212"
+                  >+7 (921) 123-12-12</a
+                >
+              </div>
+              <div class="col-12 col-m-6 col-xs-10 contacts__item">
+                <img src="images/mail.png" alt="почта" />
+                <a href="mailto:test@yandex.ru">test@yandex.ru</a>
+              </div>
+              <div class="col-12 col-m-6 col-xs-10 contacts__item">
+                <img src="images/vk.png" alt="Вконтакте" />страница Вконтакте<a
+                  href="https://vk.com/club168682281"
+                ></a>
+              </div>
+              <div class="col-12 col-m-6 col-xs-10 contacts__item">
+                <img src="images/map.png" alt="адрес" />
+                <span>пос. Лесогорский </span>
+                <p>11 км от Светогорска</p>
+                <p>43 км от Выборга</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-6 col-m-12">
+            <form class="form" action="" id="">
+              <fieldset class="form__group">
+                <legend>Обратная связь</legend>
+                <input
+                  type="text"
+                  class="form__input"
+                  name="form__name"
+                  placeholder="Фамилия и имя"
+                />
+                <label for="form__name" class="no-display">Фамилия и имя</label>
+                <input
+                  type="phone"
+                  class="form__input"
+                  name="form__phone"
+                  placeholder="Телефон"
+                />
+                <label for="form__message" class="no-display">Телефон</label>
+                <input
+                  type="text"
+                  class="form__input"
+                  name="form__message"
+                  placeholder="Текст сообщения"
+                />
+                <label for="form__message" class="no-display"
+                  >Текст сообщения</label
+                >
+                <input type="submit" class="btn" value="Отправить сообщение" />
+              </fieldset>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer class="footer">
+      <div class="container">
+        <div class="row footer__info">
+          <div class="col-5 col-m-12 footer__logo">
+            <a href="#main-page"
+              >Фонд-передержка животных <nobr>пос. Лесогорский</nobr></a
+            >
+          </div>
+          <div class="col-3 col-m-12">
+            <div class="row">
+              <div class="col-m-12">
+                <a href="tel:+79211231212"> +7 (921) <b>123-12-12</b></a>
+              </div>
+              <div class="col-m-12">
+                <a href="https://vk.com/club168682281">
+                  <img class="footer__soc" src="images/vk-light.png" alt="" />
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-6">
+            <ul class="footer__menu footer__menu--left">
+              <li><a href="#about-us">О нас</a></li>
+              <li><a href="#animals">Ищут добрые руки</a></li>
+              <li><a href="#help-shelter">Помощь фонду</a></li>
+            </ul>
+          </div>
+          <div class="col-6">
+            <ul class="footer__menu">
+              <li><a href="#contacts">Обратная связь</a></li>
+              <li><a href="#contacts">Контакты</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="scripts/main.min.js"></script>
   </body>
 </html>

@@ -1,12 +1,136 @@
 .main-page {
-    background-image: url("../images/cat-main.png");
-    background-repeat:no-repeat;
-    background-size: cover;
+  background-image: url("../images/cat-main.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 80% 100%;
 
-    height: 800px;
+  padding: 2.2vw;
+  padding-bottom: 9vw;
+  z-index: 1;
+
+  @media only screen and (max-width: $m) {
+    padding-top: calc(2.2vw + 60px);
+  }
+
+  @media only screen and (max-width: $s) {
+    background-image: url("../images/cat-main-mob.png");
+  }
+}
+
+.logo {
+  text-align: center;
+  position: relative;
+  font-size: 1.3rem;
+  // font-size: 24px;
+  font-weight: bold;
+  z-index: 100;
+
+  & a {
+    cursor: default;
+
+    &:hover {
+      //   cursor: pointer;
+    }
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: -30px;
+    left: 45px;
+    width: 152px;
+    height: 164px;
+    background-image: url("../images/paw.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    opacity: 0.4;
+    z-index: -1;
+  }
 }
 
 .navigation {
-    height: 164px;
+  height: 164px;
+
+  &__item {
+    list-style-type: none;
+    font-weight: bold;
+
+    & a:hover {
+      text-decoration: underline;
+    }
+  }
+
+  @media only screen and (max-width: $m) {
+    display: none;
+  }
 }
 
+.navigation-mob {
+  z-index: 150;
+  display: none;
+  position: fixed;
+  padding: 10px;
+  right: 0px;
+  left: 0px;
+  top: 0px;
+  background: $light-beige;
+  border-bottom: 2px solid $beige;
+  border-left: 2px solid $beige;
+
+  @media only screen and (max-width: $m) {
+    display: block;
+  }
+
+  &__logo {
+    &::after {
+      content: "";
+      position: absolute;
+      top: 5px;
+      left: 35px;
+      width: 80px;
+      height: 50px;
+      background-image: url("../images/paw.png");
+      background-size: contain;
+      background-repeat: no-repeat;
+      opacity: 0.4;
+      z-index: -1;
+    }
+  }
+
+  &__btn {
+    background-color: transparent;
+    background-image: url("../images/menu.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 50px;
+    height: 50px;
+    border: none;
+    float: right;
+    cursor: pointer;
+
+    @media only screen and (max-width: $xs) {
+      width: 40px;
+      height: 40px;
+    }
+  }
+
+  &__block {
+    height: 0;
+    // display: none;
+    overflow: hidden;
+
+    // padding-top: 30px;
+    padding-left: 10px;
+  }
+
+  &__item {
+    list-style: none;
+    padding-left: calc(2vw + 20px);
+    padding-top: 10px;
+    font-weight: bold;
+
+    &:first-child {
+      padding-top: 30px;
+    }
+  }
+}
