@@ -17,55 +17,69 @@
   }
 }
 
+.main-page--min {
+  padding-bottom: 0;
+  background-position: 80% 50%;
+}
+
 .logo {
   text-align: center;
   position: relative;
   font-size: 1.3rem;
-  // font-size: 24px;
   font-weight: bold;
   z-index: 100;
 
-  & a {
-    cursor: default;
-
-    &:hover {
-      //   cursor: pointer;
-    }
-  }
-
-  &::after {
-    content: "";
-    position: absolute;
-    top: -30px;
-    left: 45px;
-    width: 152px;
-    height: 164px;
-    background-image: url("../images/paw.png");
-    background-size: contain;
-    background-repeat: no-repeat;
-    opacity: 0.4;
-    z-index: -1;
+  @media only screen and (max-width: $l) {
+    font-size: 1rem;
   }
 }
 
-.navigation {
+.logo::after {
+  content: "";
+  position: absolute;
+  top: -30px;
+  left: 45px;
+  width: 152px;
   height: 164px;
+  background-image: url("../images/paw.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  opacity: 0.4;
+  z-index: -1;
 
-  &__item {
-    list-style-type: none;
-    font-weight: bold;
-
-    & a:hover {
-      text-decoration: underline;
-    }
+  @media only screen and (max-width: $l) {
+    width: 100px;
   }
+}
+
+.nav {
+  height: 164px;
 
   @media only screen and (max-width: $m) {
     display: none;
   }
 }
 
-.navigation-mob {
+.nav__item {
+  list-style-type: none;
+  font-weight: bold;
+  margin: 0 15px;
+
+  @media only screen and (max-width: $l) {
+    font-size: 0.9rem;
+    margin: 0 9px;
+  }
+
+  @media only screen and (max-width: 940px) {
+    margin: 0 6px;
+  }
+}
+
+.nav__item a:hover {
+  text-decoration: underline;
+}
+
+.nav-mob {
   z-index: 150;
   display: none;
   position: fixed;
@@ -80,57 +94,91 @@
   @media only screen and (max-width: $m) {
     display: block;
   }
+}
 
-  &__logo {
-    &::after {
-      content: "";
-      position: absolute;
-      top: 5px;
-      left: 35px;
-      width: 80px;
-      height: 50px;
-      background-image: url("../images/paw.png");
-      background-size: contain;
-      background-repeat: no-repeat;
-      opacity: 0.4;
-      z-index: -1;
-    }
+.nav-mob__logo::after {
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: 35px;
+  width: 80px;
+  height: 50px;
+  background-image: url("../images/paw.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  opacity: 0.4;
+  z-index: -1;
+}
+
+.nav-mob__btn {
+  background-color: transparent;
+  background-image: url("../images/menu.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 50px;
+  height: 50px;
+  border: none;
+  float: right;
+  cursor: pointer;
+
+  @media only screen and (max-width: $xs) {
+    width: 40px;
+    height: 40px;
   }
+}
 
-  &__btn {
-    background-color: transparent;
-    background-image: url("../images/menu.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 50px;
-    height: 50px;
-    border: none;
-    float: right;
-    cursor: pointer;
+.nav-mob__block {
+  height: 0;
+  overflow: hidden;
+  padding-left: 10px;
+}
 
-    @media only screen and (max-width: $xs) {
-      width: 40px;
-      height: 40px;
-    }
+.nav-mob__item {
+  list-style: none;
+  padding-left: calc(2vw + 20px);
+  padding-top: 10px;
+  font-weight: bold;
+}
+
+.nav-mob__item:first-child {
+  padding-top: 30px;
+}
+
+.nav-sticky {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: auto;
+  padding: 0 2.2vw;
+  background-color: $light-beige;
+  z-index: 1000;
+  overflow: hidden;
+  height: 0;
+  // border-bottom: 3px solid $white;
+  box-shadow: 0 0 10px $white;
+
+  @media only screen and (max-width: $m) {
+    display: none;
   }
+}
 
-  &__block {
-    height: 0;
-    // display: none;
-    overflow: hidden;
+.nav-sticky .logo {
+  font-size: 1rem;
 
-    // padding-top: 30px;
-    padding-left: 10px;
+  @media only screen and (max-width: $l) {
+    font-size: 0.8rem;
   }
+}
 
-  &__item {
-    list-style: none;
-    padding-left: calc(2vw + 20px);
-    padding-top: 10px;
-    font-weight: bold;
+.nav-sticky .logo:after {
+  left: 0;
+}
 
-    &:first-child {
-      padding-top: 30px;
-    }
-  }
+.nav-sticky > .row {
+  height: 100%;
+}
+
+.nav--visible {
+  height: 72px !important;
 }

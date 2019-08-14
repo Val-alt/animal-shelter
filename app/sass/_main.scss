@@ -39,20 +39,17 @@ a {
   color: inherit;
 }
 
+.title {
+  text-align: center;
+}
+
 .h1 {
   font-size: 3.3rem;
-  // font-size: 60px;
   color: $green;
   text-transform: uppercase;
   font-weight: bold;
   padding-top: 0.8vw;
-  max-width: 60%;
   line-height: 1.5;
-
-  // @media only screen and (max-width: $m) {
-  //   width: 30px;
-  //   left: -40px;
-  // }
 
   @media only screen and (max-width: $s) {
     max-width: 100%;
@@ -60,107 +57,58 @@ a {
   }
 }
 
-#about-us .h2 {
-  width: 100px;
-
-  @media only screen and (max-width: $l) {
-    width: 85px;
-  }
-
-  @media only screen and (max-width: $s) {
-    width: 74px;
-  }
-}
-
-#animals .h2 {
-  width: 323px;
-
-  @media only screen and (max-width: $l) {
-    width: 285px;
-  }
-
-  @media only screen and (max-width: $s) {
-    width: 250px;
-  }
-}
-
-#help-shelter .h2 {
-  width: 275px;
-
-  @media only screen and (max-width: $l) {
-    width: 243px;
-  }
-
-  @media only screen and (max-width: $s) {
-    width: 212px;
-  }
-}
-
-#contacts .h2 {
-  width: 170px;
-    
-  @media only screen and (max-width: $l) {
-    width: 148px;
-  }
-
-  @media only screen and (max-width: $s) {
-    width: 132px;
-  }
-}
-
 .h2 {
   position: relative;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: calc(2.8vw + 10px);
+  display: inline-block;
+  // margin-left: auto;
+  // margin-right: auto;
+  margin-bottom: calc(1.2vw + 10px);
   font-size: 1.65rem;
-  // font-size: 30px;
   font-weight: bold;
   text-transform: uppercase;
   font-weight: bold;
   color: $green;
+}
 
-  &:after {
-    content: " ";
-    display: block;
-    width: 40px;
-    height: 3px;
-    background-color: $beige;
-    position: absolute;
-    top: 50%;
-    right: -60px;
+.h2:after {
+  content: " ";
+  display: block;
+  width: 40px;
+  height: 3px;
+  background-color: $beige;
+  position: absolute;
+  top: 50%;
+  right: -60px;
 
-    @media only screen and (max-width: $s) {
-      width: 30px;
-      right: -40px;
-    }
-
-    @media only screen and (max-width: $xs) {
-      width: 20px;
-      right: -25px;
-    }
+  @media only screen and (max-width: $s) {
+    width: 30px;
+    right: -40px;
   }
 
-  &:before {
-    content: " ";
-    display: block;
-    width: 40px;
-    height: 3px;
-    background-color: $beige;
-    position: absolute;
-    top: 50%;
-    left: -60px;
+  @media only screen and (max-width: $xs) {
+    width: 20px;
+    right: -25px;
+  }
+}
 
-    @media only screen and (max-width: $s) {
-      width: 30px;
-      left: -40px;
-    }
+.h2:before {
+  content: " ";
+  display: block;
+  width: 40px;
+  height: 3px;
+  background-color: $beige;
+  position: absolute;
+  top: 50%;
+  left: -60px;
 
-    @media only screen and (max-width: $xs) {
-      width: 20px;
-      left: -25px;
-    }
+  @media only screen and (max-width: $s) {
+    width: 30px;
+    left: -40px;
+  }
+
+  @media only screen and (max-width: $xs) {
+    width: 20px;
+    left: -25px;
   }
 }
 
@@ -183,7 +131,16 @@ a {
   margin: 0 auto;
 }
 
-#help-shelter .h3 {
+#animals .h3 a {
+  cursor: pointer;
+}
+
+#animals .h3 a:hover{
+  text-decoration: underline;
+}
+
+#help-shelter .h3,
+#found-a-house .h3 {
   max-width: 700px;
   text-align: center;
   margin: 0 auto;
@@ -191,32 +148,28 @@ a {
 
 .h3 {
   font-size: 1.3rem;
-  // font-size: 24px;
   font-weight: normal;
 }
 
 .h4 {
   font-size: 1.3rem;
-  // font-size: 24px;
   font-weight: bold;
 }
 
 .btn {
+  text-align: center;
   display: inline-block;
-  padding: 1.5vw 2vw;
+  padding: 1vw 1.5vw;
   background-color: $green;
   color: $white;
   font-size: 1.3rem;
-  // font-size: 24px;
   font-weight: bold;
   text-transform: uppercase;
   transition: 0.25s;
+}
 
-  // &:hover {
-  //   cursor: pointer;
-  //   // box-shadow: 0 10px 20px $gray;
-  //   // transition: 1s;
-  // }
+.btn--margin {
+  margin-top: calc(1.5vw + 10px);
 }
 
 .btn:hover {

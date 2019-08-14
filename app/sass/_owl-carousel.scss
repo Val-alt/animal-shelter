@@ -1,0 +1,89 @@
+.owl-carousel .owl-stage {
+  height: 542px;
+
+  @media only screen and (max-width: 1088px) {
+    height: 491px;
+  }
+
+  @media only screen and (max-width: 500px) {
+    height: auto;
+  }
+}
+
+.owl-carousel .owl-item {
+  width: 386px;
+  height: 353px;
+
+  @media only screen and (max-width: 500px) {
+    height: auto;
+  }
+}
+
+.owl-carousel .owl-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+  height: 265px;
+  margin-bottom: 10px;
+
+  @media only screen and (max-width: 1088px) {
+    height: 240px;
+  }
+}
+
+.owl-carousel .owl-nav {
+  position: absolute;
+  top: 40%;
+  left: -45px;
+  right: -45px;
+}
+
+.owl-carousel .owl-nav button.owl-prev,
+.owl-carousel .owl-nav button.owl-next {
+  position: absolute;
+}
+
+.owl-carousel .owl-nav button.owl-prev {
+  left: 0px;
+}
+
+.owl-carousel .owl-nav button.owl-next {
+  right: 0px;
+}
+
+.owl-carousel .owl-nav button.owl-prev img,
+.owl-carousel .owl-nav button.owl-next img {
+  width: 40px;
+  height: 40px;
+}
+
+.owl-carousel .owl-nav button.owl-prev img:active,
+.owl-carousel .owl-nav button.owl-next img:active {
+  filter: saturate(180%);
+}
+
+.owl-carousel .owl-nav button.owl-prev img {
+  transform: rotate(180deg);
+}
+
+.owl-theme .owl-nav [class*="owl-"]:hover {
+  background: none;
+}
+
+.owl-theme .owl-dots {
+  margin-top: 15px;
+
+  @media only screen and (max-width: 500px) {
+    display: none;
+  }
+}
+
+#animals .owl-theme .owl-dots .owl-dot span {
+  background: $light-beige;
+}
+
+#animals .owl-theme .owl-dots .owl-dot.active span,
+.owl-theme .owl-dots .owl-dot:hover span {
+  background: $beige;
+}

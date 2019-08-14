@@ -1,71 +1,79 @@
 .help-shelter {
-  padding-bottom: calc(4vw + 10px);
+  padding-top: calc(2vw + 10px);
+}
 
-  &__item {
-    position: relative;
+.help-shelter__item {
+  position: relative;
 
-    background-color: $light-beige;
-    // border-radius: 20px;
-    padding-top: calc(1.8vw + 5px);
-    padding-right: calc(1vw);
-    padding-bottom: calc(1.8vw + 5px);
-    padding-left: calc(3vw + 5px);
-    margin-top: calc(3vw + 10px);
+  background-color: $light-beige;
+  border-radius: 20px;
+  padding-top: calc(1.8vw + 5px);
+  padding-right: calc(1vw);
+  padding-bottom: calc(1.8vw + 5px);
+  padding-left: calc(3vw + 5px);
+  margin-top: calc(2vw + 10px);
 
-    background-repeat: no-repeat;
-    background-position: 90% 80%;
-    background-size: 26%;
+  background-repeat: no-repeat;
+  background-position: 90% 80%;
+  background-size: 26%;
 
-    &::before {
-      width: 100%;
-      height: 100%;
-      left: 0;
-      top: 0;
-      position: absolute;
-      display: block;
-      content: "";
-      background-color: $beige;
-      z-index: -1;
-      transform: rotate(3deg);
-    }
-
-    @media only screen and (max-width: $xs) {
-      background-position: 95% 95%;
-    }
-
-    &:nth-child(1) {
-      background-image: url("../images/syringe.png");
-    }
-
-    &:nth-child(2) {
-      background-image: url("../images/bowl.png");
-    }
-
-    &:nth-child(3) {
-      background-image: url("../images/glove.png");
-    }
-
-    &:nth-child(4) {
-      background-image: url("../images/card.png");
-    }
-
-    & img {
-      width: 34px;
-      height: 34px;
-      position: relative;
-      top: 10px;
-    }
+  @media only screen and (max-width: $xs) {
+    background-position: 95% 95%;
   }
+}
 
-  &__ul {
-    padding-left: 20px;
+.help-shelter__item::before {
+  width: 100%;
+  height: 100%;
+  left: 5px;
+  top: 5px;
+  position: absolute;
+  display: block;
+  content: "";
+  background-color: $beige;
+  z-index: -1;
+  border-radius: 20px;
+}
 
-    & li {
-      color: $green;
-    }
+.help-shelter__item:nth-child(1) {
+  background-image: url("../images/syringe.png");
+}
 
-    & p {
-      color: $gray;
-    }
-  }
+.help-shelter__item:nth-child(2) {
+  background-image: url("../images/bowl.png");
+}
+
+.help-shelter__item:nth-child(3) {
+  background-image: url("../images/rags.png");
+}
+
+.help-shelter__item:nth-child(4) {
+  background-image: url("../images/photo.png");
+}
+
+.help-shelter__item:nth-child(5) {
+  background-image: url("../images/glove.png");
+}
+
+.help-shelter__item:nth-child(6) {
+  background-image: url("../images/card.png");
+}
+
+.help-shelter__item img {
+  width: 34px;
+  height: 34px;
+  position: relative;
+  top: 10px;
+}
+
+.help-shelter__ul {
+  padding-left: 20px;
+}
+
+.help-shelter__ul li {
+  color: $green;
+}
+
+.help-shelter__ul p {
+  color: $gray;
 }
